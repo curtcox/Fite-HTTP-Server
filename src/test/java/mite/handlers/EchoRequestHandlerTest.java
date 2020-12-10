@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class EchoRequestHandlerTest {
 
-    EchoRequestHandler handler = EchoRequestHandler.of();
+    HTTPRequestHandler handler = EchoRequestHandler.of();
 
     @Test
     public void can_create() {

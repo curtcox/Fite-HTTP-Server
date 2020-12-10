@@ -1,8 +1,6 @@
 package mite;
 
-import mite.handlers.CompositeRequestHandler;
-import mite.handlers.EchoRequestHandler;
-import mite.handlers.UnsupportedRequestHandler;
+import mite.handlers.*;
 
 import java.io.IOException;
 
@@ -12,6 +10,7 @@ public final class Start {
         MiteHTTPServer.startListeningOnPort(
                 8000,
                 CompositeRequestHandler.of(
+                    ProcessRequestHandler.of(),
                     EchoRequestHandler.of(),
                     UnsupportedRequestHandler.of()
                 )
