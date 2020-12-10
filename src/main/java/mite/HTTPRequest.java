@@ -6,7 +6,8 @@ public final class HTTPRequest {
 
     public final String string; // The entire unparsed request string we were sent
     public final String method; // GET, POST, etc...
-    public final String filename;
+    public final String filename; // http://server/filename
+    // valid characters are ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~:/?#[]@!$&'()*+,;=
     public final HTTPVersion httpVersion;
 
     public static HTTPRequest parse(String string) {

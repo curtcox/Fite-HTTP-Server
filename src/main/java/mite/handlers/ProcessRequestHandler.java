@@ -15,7 +15,7 @@ public final class ProcessRequestHandler {
     public interface ParameterMap extends Function<HTTPRequest,List<String>>{}
 
     public static HTTPRequestHandler of() {
-        return of(httpRequest -> Arrays.asList(httpRequest.filename.substring(1)));
+        return of(httpRequest -> Arrays.asList(httpRequest.filename.substring(1).split("\\+")));
     }
 
     public static HTTPRequestHandler of(ParameterMap f) {
