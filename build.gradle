@@ -3,7 +3,7 @@ apply plugin: 'application'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '0.1'
 group = "com.github.curtcox"
 archivesBaseName = "Mite"
@@ -53,14 +53,14 @@ test {
 uploadArchives {
   repositories {
     mavenDeployer {
-      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+      //beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
       repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
+//        authentication(userName: ossrhUsername, password: ossrhPassword)
       }
 
       snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
+//        authentication(userName: ossrhUsername, password: ossrhPassword)
       }
 
       pom.project {
@@ -71,15 +71,15 @@ uploadArchives {
         url 'https://github.com/curtcox/Mite-HTTP-Server/'
 
         scm {
-          connection 'https://github.com/curtcox/Mite-HTTP-Server/'
-          developerConnection 'https://github.com/curtcox/Mite-HTTP-Server/'
-          url 'https://github.com/curtcox/Mite-HTTP-Server/'
+          connection 'https://github.com/curtcox/Fite-HTTP-Server/'
+          developerConnection 'https://github.com/curtcox/Fite-HTTP-Server/'
+          url 'https://github.com/curtcox/Fite-HTTP-Server/'
         }
 
         licenses {
           license {
             name 'Mite License'
-            url 'https://github.com/curtcox/Mite-HTTP-Server/blob/master/LICENSE'
+            url 'https://github.com/curtcox/Fite-HTTP-Server/blob/master/LICENSE'
           }
         }
 
