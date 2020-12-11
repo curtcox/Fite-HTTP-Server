@@ -1,17 +1,9 @@
 package mite;
 
 import org.junit.Test;
-import java.util.*;
 import static org.junit.Assert.*;
 
 public class HTTPRequestTest {
-
-    @Test
-    public void error_is_set_when_parsing_fails() {
-        String string = toString();
-        HTTPRequest request = parse(string);
-        assertTrue(request.error instanceof NoSuchElementException);
-    }
 
     @Test
     public void httpVersion_is_set_when_parsing_fails() {
