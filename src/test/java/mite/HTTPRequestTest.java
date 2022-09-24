@@ -1,9 +1,15 @@
 package mite;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
+
 import static org.junit.Assert.*;
 
 public class HTTPRequestTest {
+
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(2);
 
     @Test
     public void httpVersion_is_set_when_parsing_fails() {

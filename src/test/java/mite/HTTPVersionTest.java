@@ -1,9 +1,15 @@
 package mite;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
+
 import static org.junit.Assert.*;
 
 public class HTTPVersionTest {
+
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(2);
 
     @Test
     public void version_is_version_name_when_given() {

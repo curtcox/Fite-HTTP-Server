@@ -1,12 +1,18 @@
 package mite.handlers;
 
 import mite.*;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
+
 import static org.junit.Assert.*;
 
 public class EchoRequestHandlerTest {
 
     HTTPRequestHandler handler = EchoRequestHandler.of();
+
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(2);
 
     @Test
     public void can_create() {
