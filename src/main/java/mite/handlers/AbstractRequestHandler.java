@@ -2,6 +2,10 @@ package mite.handlers;
 
 import mite.*;
 
+/**
+ * Skeletal implementation of HTTPRequestHandler that
+ * determines if it can do something by trying to.
+ */
 public abstract class AbstractRequestHandler
     implements HTTPRequestHandler
 {
