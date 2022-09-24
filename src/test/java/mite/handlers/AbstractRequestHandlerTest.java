@@ -2,7 +2,6 @@ package mite.handlers;
 
 import mite.*;
 import org.junit.Test;
-import java.io.*;
 import static org.junit.Assert.*;
 
 public class AbstractRequestHandlerTest {
@@ -15,7 +14,7 @@ static class TestHandler implements HTTPRequestHandler {
     }
 
     @Override
-    public HTTPResponse handle(HTTPRequest request) throws IOException {
+    public HTTPResponse handle(HTTPRequest request) {
         return null;
     }
 }
